@@ -11,16 +11,18 @@ venv/
 accounts.txt
 manual-accounts.txt
 
-# internal / development-only (never push)
-xProton-Research.md
+# internal / agent / dev tooling (never commit) — generic patterns, no specifics
 .freebuff/
-tui-preview.ps1
-stress-heavy.sh
+*Research*.md
+*.ps1
+*-heavy.sh
+dev-ssh*
 
 # secrets / credentials (never commit)
 *.pem
 *.key
-dev-ssh.py
+*id_rsa*
+*.env
 
 # test artifacts
 *.conf.json
