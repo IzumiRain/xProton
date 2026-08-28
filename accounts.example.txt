@@ -1,0 +1,25 @@
+# xProton accounts — one account per two-line block.
+#
+# Manual account (you created it at account.proton.me — free forever):
+#   email:password[:totp_secret][:COUNTRY]
+#   <session JSON, one line, or "-">
+#
+# API-created account (no credentials returned by the temp-account backend):
+#   api:<label>[:COUNTRY]
+#   <session JSON, one line>
+#
+# COUNTRY pins the account to one of: CA, CH, JP, MX, NL, NO, PL, RO, SG, US
+# Lines starting with '#' and blank lines are ignored.
+# After editing this file, run:  xproton verify
+
+# ---- example: manual account with 2FA, pinned to Japan -------------
+# myname@proton.me:S3cretPass:JBSWY3DPEHPK3PXP:JP
+# -
+
+# ---- example: manual account without 2FA (assigned automatically) --
+# other@proton.me:anotherPass
+# -
+
+# ---- example: API-created account (created via `xproton create`) ----
+# api:tmp-3f9a2c71:US
+# {"uid":"...","accessToken":"...","refreshToken":"..."}

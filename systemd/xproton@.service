@@ -1,0 +1,16 @@
+[Unit]
+Description=xProton ProtonVPN location %i
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/etc/xproton/bin/sing-box run -c /etc/xproton/instances/%i/config.json
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65535
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

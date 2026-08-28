@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# local runtime state (never commit)
+/etc/xproton/
+accounts.txt
+manual-accounts.txt
+
+# internal / development-only (never push)
+xProton-Research.md
+.freebuff/
+tui-preview.ps1
+stress-heavy.sh
+
+# secrets / credentials (never commit)
+*.pem
+*.key
+dev-ssh.py
+
+# test artifacts
+*.conf.json
